@@ -1,0 +1,15 @@
+{
+  "autoloadFolder": [
+    "controllers",
+    "models",
+    "views",
+    "utils"
+  ],
+  "database": {
+    "name": "react-php-api",
+    "host": "127.0.0.1",
+    "username": "root",
+    "password": "123"
+  },
+  "basepath": ""
+}

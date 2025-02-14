@@ -10,7 +10,10 @@ import {
 import type { Route } from "./+types/root";
 import "./app.css";
 
-export const links: Route.LinksFunction = () => [
+export const links: () => [{ rel: string; href: string }, { rel: string; crossOrigin: string; href: string }, {
+  rel: string;
+  href: string
+}] = () => [
   { rel: "preconnect", href: "https://fonts.googleapis.com" },
   {
     rel: "preconnect",

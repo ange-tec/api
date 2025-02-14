@@ -1,0 +1,24 @@
+[
+  {
+    "path": "/",
+    "controller": "Home",
+    "action": "Index",
+    "method": "GET",
+    "params": []
+  },
+  {
+    "path": "/list",
+    "controller": "Shopping",
+    "action": "Index",
+    "method": "GET",
+    "params": []
+  },
+  {
+    "path": "/add",
+    "controller": "Shopping",
+    "action": "Add",
+    "method": "POST",
+    "params": []
+  }
+
+]
