@@ -7,18 +7,40 @@
     "params": []
   },
   {
-    "path": "/list",
+    "path": "/listShop",
     "controller": "Shopping",
     "action": "Index",
     "method": "GET",
-    "params": []
+    "params": [
+      "id"
+    ]
   },
   {
-    "path": "/add",
+    "path": "/addShop",
     "controller": "Shopping",
     "action": "Add",
     "method": "POST",
-    "params": []
+    "params": [
+      "shop"
+    ]
+  },
+  {
+    "path": "/deleteShop",
+    "controller": "Shopping",
+    "action": "Delete",
+    "method": "DELETE",
+    "params": [
+      "id"
+    ]
+  },
+  {
+    "path": "/updateShops",
+    "controller": "Shopping",
+    "action": "Update",
+    "method": "UPDATE",
+    "params": [
+      "id"
+    ]
   }
 
 ]

@@ -96,7 +96,7 @@ class ShoppingModel
     }
 
     public function getList(){
-        $req = $this->bdd->prepare("SELECT * FROM persos ORDER BY creation_date DESC");
+        $req = $this->bdd->prepare("SELECT * FROM shopping ORDER BY title");
         $req->execute();
         $shop = $req->fetchAll(PDO::FETCH_OBJ);
         if(!$shop){

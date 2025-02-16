@@ -7,7 +7,7 @@ class HttpRequest
     private $url;
     private $method;
     private array $params;
-    private array $route;
+    private $route;
 
     public function __construct($url = null, $method = null)
     {
@@ -36,7 +36,7 @@ class HttpRequest
         $this->params[] = $value;
     }
 
-    public function getRoute(): array
+    public function getRoute()
     {
         return $this->route;
     }

@@ -5,7 +5,7 @@ namespace utils;
 class Config
 {
     private string $configFile;
-    private string $config;
+    private $config;
     public function __construct($configPath = "config/config.json"){
         if(!file_exists($configPath)){
             exit;
@@ -18,7 +18,7 @@ class Config
         return $this->configFile;
     }
 
-    public function getConfig(): string{
+    public function getConfig(){
         return $this->config;
     }
 

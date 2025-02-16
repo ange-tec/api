@@ -10,17 +10,18 @@ export function meta({}: Route.MetaArgs) {
 
 export default function ShowHomePage() {
   return(
-      <div className="container">
-        <div className="">
-          <div className="bg-blue-500 mt-2 h-[100px]">
-            <p className="font-bold font-mono text-center"> Ma liste - Mes courses !</p>
+      <>
+          <div className="container">
+              <div className="bg-gray-500">
+                  <p className="font-bold font-serif text-center"> Ma liste - Mes courses !</p>
+              </div>
           </div>
-        </div>
-        <div className="border text-center">
-            <Link to="/login" className="border"> Se Connecter </Link>
-            <Link to="/add" className="border"> Ajouter une course </Link>
-            <Link to="/list" className="border"> Voir la liste des courses </Link>
-        </div>
-      </div>
+          <div className="text-center">
+              <Link to="/login" className="border rounded-lg bg-blue-500"> Se Connecter </Link>
+              <Link to="/addShops" className="border rounded-lg"> Ajouter une course </Link>
+              <Link to="/listShops" className="border rounded-lg "> Voir la liste des courses </Link>
+          </div>
+      </>
+
   )
 }

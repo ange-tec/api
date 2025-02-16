@@ -12,10 +12,16 @@ header('Access-Control-Allow-Headers: *');
 header('Access-Control-Allow-Methods: *');
 
 require_once "./utils/Autoloader.php";
+require_once 'utils/HttpRequest.php';
+require_once 'utils/Route.php';
+require_once 'utils/Router.php';
+require_once 'utils/Config.php';
+
 Autoloader::register();
 
 $configManager = new Config();
 [$configFile, $config] = $configManager->registerConfig();
+
 
 try {
     $httpRequest = new HttpRequest();

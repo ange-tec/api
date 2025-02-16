@@ -1,3 +1,7 @@
+import {Link} from "react-router";
+
 export  default function showLoginUser(){
-    return
+    return(
+        <Link to='/'> Home </Link>
+    )
 }

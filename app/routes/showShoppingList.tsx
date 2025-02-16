@@ -1,5 +1,6 @@
 import {useEffect, useState} from "react";
 import type {ShopI} from "~/shared/interfaces/Shop.interface";
+import {Link} from "react-router";
 
 export default function showShoppingList() {
 
@@ -13,7 +14,7 @@ export default function showShoppingList() {
 
     const fetchShoppings = async() => {
 
-        await fetch("http://127.0.0.1:5500/list", {
+        await fetch("http://127.0.0.1:5500/listShops", {
             method: "GET",
             mode: "cors"
         })
@@ -35,6 +36,7 @@ export default function showShoppingList() {
                 <p>{shop.description}</p>
                 <span>{shop.price}</span>
             </article>))}
+            <Link to='/'> Home </Link>
         </section>
     )
 }
