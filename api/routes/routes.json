@@ -7,7 +7,7 @@
     "params": []
   },
   {
-    "path": "/listShop",
+    "path": "/listShops",
     "controller": "Shopping",
     "action": "Index",
     "method": "GET",

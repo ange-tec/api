@@ -18,7 +18,7 @@ export default function ShowHomePage() {
           </div>
           <div className="text-center">
               <Link to="/login" className="border rounded-lg bg-blue-500"> Se Connecter </Link>
-              <Link to="/addShops" className="border rounded-lg"> Ajouter une course </Link>
+              <Link to="/addShop" className="border rounded-lg"> Ajouter une course </Link>
               <Link to="/listShops" className="border rounded-lg "> Voir la liste des courses </Link>
           </div>
       </>

@@ -105,4 +105,19 @@ class ShoppingModel
         $req->closeCursor();
         return $shop;
     }
+    public function getById(int $id){
+        $req = $this->bdd->prepare("SELECT * FROM shopping WHERE id=:id");
+        $req->bindValue(":id", $id, PDO::PARAM_INT);
+        $req->execute();
+        $shop = $req->fetch(PDO::FETCH_OBJ);
+        if(!$shop){
+            return null;
+        }
+        return $shop;
+    }
+
+    public function deleteById(int $id){
+        return $this->bdd->exec("DELETE FROM shopping WHERE id={$id}");
+    }
+
 }

@@ -10,7 +10,7 @@ class ShoppingController
     /**
      * @throws Exception
      */
-    public function ShowList()
+    public function listShops()
     {
         $config = new Config();
         $shoppingManager = new ShoppingModel(BDD::getInstance($config->getConfig()));
@@ -33,14 +33,17 @@ class ShoppingController
         exit;
     }
 
+    /**
+     * @throws Exception
+     */
     public function Delete(...$params)
     {
         $id = $params["id"];
 
         $config = new Config();
-        $persoManager = new Perso(BDD::getInstance($config->getConfig()));
+        $shopManager = new ShoppingModel(BDD::getInstance($config->getConfig()));
 
-        if (!$persoManager->deleteById($id)) {
+        if (!$shopManager->deleteById($id)) {
             http_response_code(400);
             echo json_encode([
                 "message" => "La suppression du personnage a échouée.",
